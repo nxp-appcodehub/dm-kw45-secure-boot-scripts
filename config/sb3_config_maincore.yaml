@@ -1,0 +1,75 @@
+# ============================  SB configuration from MCUXpresso Secure Provisioning tool  =============================
+
+# ======================================================================================================================
+#                                                 == General Options ==                                                 
+# ======================================================================================================================
+# -------------------------------------===== The chip family name [Required] =====--------------------------------------
+# Description: NXP chip family identifier.
+family: kw45b41z8
+# ======================================================================================================================
+#                                                  == Basic Settings ==                                                 
+# ======================================================================================================================
+# ---------------------------------------===== Firmware version. [Optional] =====---------------------------------------
+# Description: Value compared with Secure_FW_Version monotonic counter value stored in protected memory (MCU specific).
+# If value is lower than value in protected memory, then is image rejected (rollback protection).
+firmwareVersion: 0
+# -----------------------------------------===== SB3 filename [Required] =====------------------------------------------
+# Description: Generated SB3 container filename.
+containerOutputFile: ../workspace/bootable_images/app_maincore.sb3
+# ======================================================================================================================
+#                                              == Image Signing Settings ==                                             
+# ======================================================================================================================
+# -------------------------------===== Signature Provider [Conditionally required] =====--------------------------------
+# Description: Signature provider configuration in format 'type=<identifier>;<key1>=<value1>;<key2>=<value2>'.
+signProvider: type=file;file_path=../workspace/keys/ROT1_p384.pem
+# ======================================================================================================================
+#                                              == Certificate Block V2.1 ==                                             
+# ======================================================================================================================
+# -----------------------------===== Certificate Block binary/config file [Required] =====------------------------------
+# Description: Path to certificate block binary or config file.
+certBlock: ../workspace/keys/ROT1_cert_block.bin
+# ======================================================================================================================
+#                                           == Secure Binary v3.1 Settings ==                                           
+# ======================================================================================================================
+# ----------------------------------------===== Part Common Key [Optional] =====----------------------------------------
+# Description: Path to PCK/NPK 256 or 128 bit key in plain hex string format or path to binary file or hex string.
+containerKeyBlobEncryptionKey: ../workspace/keys/sb3kdk.txt
+# ---------------------------------------===== KDK access rights [Optional] =====---------------------------------------
+# Description: Accepted values are 0, 1, 2 and 3. Value used as key properties for key derivation process, more details
+# can be found in CSSv2 manual.
+# Possible options: <0, 1, 2, 3>
+kdkAccessRights: 3
+# ------------------------------------------===== Description [Optional] =====------------------------------------------
+# Description: Description up to 16 characters, longer will be truncated. Stored in SB3.1 manifest.
+description: KW45B41Z8 SB3
+# ======================================================================================================================
+#                                       == Secure Binary v3.1 Commands Settings ==                                      
+# ======================================================================================================================
+commands:
+
+  # Check firmware versions
+  - checkFwVersion:
+      value: 0
+      counterId: secure
+
+  # Erase flash for the image 0
+  - erase:
+      address: 0
+      size: '0x00100000'
+
+  # Erase the flash and write the application
+  - load:
+      address: 0
+      file: ../workspace/bootable_images/app_maincore_signed.xip
+
+
+# ALL SUPPORTED SB COMMANDS:
+# - checkFwVersion(value, counterId);
+# - erase(address, size, memoryId);
+# - execute(address);
+# - fillMemory(address, size, pattern);
+# - load(address, memoryId, file, values, value, authentication);
+# - loadCMAC(address, memoryId, file);
+# - loadHashLocking(address, memoryId, file);
+# - programFuses(address, values);
+# - programIFR(address, file, value, values);

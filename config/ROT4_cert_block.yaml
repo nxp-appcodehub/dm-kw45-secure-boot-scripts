@@ -1,0 +1,24 @@
+# ===============  YAML configuration for Certification Block V21  ================
+# ======================================================================================================================
+#                                   == ISK (Image signing key) Certificate Settings ==
+# ======================================================================================================================
+useIsk: False  # [Required], Use ISK for signature certification.
+# ======================================================================================================================
+#                                                == Root Keys Settings ==
+# ======================================================================================================================
+# ROT0:
+rootCertificate0File: ../workspace/keys/ROT1_p384.pub  # [Required], Root Certificate File 0.
+# ROT1:
+rootCertificate1File: ../workspace/keys/ROT2_p384.pub  # [Required], Root Certificate File 1.
+# ROT2:
+rootCertificate2File: ../workspace/keys/ROT3_p384.pub  # [Required], Root Certificate File 2.
+# ROT3:
+rootCertificate3File: ../workspace/keys/ROT4_p384.pub  # [Required], Root Certificate File 3.
+mainRootCertId: 3  # [Conditionally required] Index of root key that is used as a main.
+# ======================================================================================================================
+#                                                  == Basic Settings ==
+# ======================================================================================================================
+# --------------------------------------===== cert block filename [Required] =====--------------------------------------
+# Description: Generated cert block filename.
+containerOutputFile: ../workspace/keys/ROT4_cert_block.bin
+# ---------------------------------------------------------------------------------

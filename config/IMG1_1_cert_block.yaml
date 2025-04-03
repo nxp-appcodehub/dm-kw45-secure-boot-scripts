@@ -1,0 +1,28 @@
+# ===============  YAML configuration for Certification Block V21  ================
+# ======================================================================================================================
+#                                   == ISK (Image signing key) Certificate Settings ==
+# ======================================================================================================================
+useIsk: True  # [Required], Use ISK for signature certification.
+iskPublicKey: ../workspace/keys/ISK1_1_p384.pub
+signProvider: type=file;file_path=../workspace/keys/ROT1_p384.pem
+iskCertificateConstraint: 0  # [Optional] Constraint is certificate version, compared with monotonic counter in PFR/OTP.
+# iskCertData: user_cert_data.bin  # [Optional] ISK certificate user data
+# ======================================================================================================================
+#                                                == Root Keys Settings ==
+# ======================================================================================================================
+# ROT0:
+rootCertificate0File: ../workspace/keys/ROT1_p384.pub  # [Required], Root Certificate File 0.
+# ROT1:
+rootCertificate1File: ../workspace/keys/ROT2_p384.pub  # [Required], Root Certificate File 1.
+# ROT2:
+rootCertificate2File: ../workspace/keys/ROT3_p384.pub  # [Required], Root Certificate File 2.
+# ROT3:
+rootCertificate3File: ../workspace/keys/ROT4_p384.pub  # [Required], Root Certificate File 3.
+mainRootCertId: 0  # [Conditionally required] Index of root key that is used as a main.
+# ======================================================================================================================
+#                                                  == Basic Settings ==
+# ======================================================================================================================
+# --------------------------------------===== cert block filename [Required] =====--------------------------------------
+# Description: Generated cert block filename.
+containerOutputFile: ../workspace/keys/ISK_1_cert_block.bin
+# ---------------------------------------------------------------------------------
