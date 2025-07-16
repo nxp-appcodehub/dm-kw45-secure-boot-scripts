@@ -48,11 +48,11 @@ To enter ISP mode, KW45's PTA4 pin (BOOT_CONFIG) needs to be in logic high durin
 
 If KW45B41Z-EVK is used, press the button SW4(PTA4) when reset, KW45 will enter ISP mode. 
 
-Install spsdk
+Install spsdk (Run as administrator)
 ```
 python -m pip install --upgrade pip
 pip install spsdk==2.6.0
-spsdk –version
+spsdk --version
 ```
 Enter the directory "script" and double-click the script to run.
 
@@ -164,7 +164,7 @@ Note: debuging auth is needed
     ![](./images/isk_sb3.jpg)
 3. At the Lifecycle OME_Open and OEM_Return, the firmware of main core can be written directly by writing Flash, but the firmware of NBU can only be uploaded via SB3 at any time.
 
-4. The known issue: due to spsdk, advancing lifecycle to OEM_Retrun is not currently supported
+4. If wireless example is used, change gEraseNVMLink_d to 0.
 
 
 ## 6. Support<a name="step6"></a>

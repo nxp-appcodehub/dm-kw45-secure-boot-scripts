@@ -5,8 +5,8 @@
 
 nxpdebugmbox -f kw45b41z8 cmd start
 nxpdebugmbox -f kw45b41z8 cmd get-crp
-nxpdebugmbox -f kw45b41z8 -v -i pyocd auth -b 0x0 -c ../workspace/debug_auth/debug_auth_cert.dc -k ../workspace/keys/debug_authentication_key_ECC_384.pem
-nxpdebugmbox -f kw45b41z8 cmd famode -m ../workspace//bootable_images/OEM_Return_Signed.xip
+nxpdebugmbox -f kw45b41z8 -n -v -i pyocd auth -n -b 0x0 -c ../workspace/debug_auth/debug_auth_cert.dc -k ../workspace/keys/debug_authentication_key_ECC_384.pem
+nxpdebugmbox -f kw45b41z8 -n cmd famode -m ../workspace//bootable_images/OEM_Return_Signed.xip
 nxpdebugmbox -f kw45b41z8 cmd get-crp
 
 pause
