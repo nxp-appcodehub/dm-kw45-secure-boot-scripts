@@ -3,9 +3,9 @@
 
 @rem SPDX-License-Identifier: BSD-3-Clause
 
-nxpdebugmbox -f kw45b41z8 cmd start
-nxpdebugmbox -f kw45b41z8 cmd get-crp
-nxpdebugmbox -f kw45b41z8 cmd famode -m ./NXP_Return_Signed.xip
-nxpdebugmbox -f kw45b41z8 cmd get-crp
+nxpdebugmbox cmd -f kw45b41z8 start 
+nxpdebugmbox cmd -f kw45b41z8 get-crp
+nxpdebugmbox -n cmd -f kw45b41z8 famode -m ./NXP_Return_Signed.xip
+nxpdebugmbox cmd -f kw45b41z8 get-crp
 
 pause

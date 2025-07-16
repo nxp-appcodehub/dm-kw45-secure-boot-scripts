@@ -11,13 +11,13 @@ python generate_SB3KDK.py
 type ..\workspace\keys\sb3kdk.txt
 
 
-nxpimage cert-block export -c "..\config\ROT1_cert_block.yaml" -f kw45b41z8
-nxpimage cert-block export -c "..\config\ROT2_cert_block.yaml" -f kw45b41z8
-nxpimage cert-block export -c "..\config\ROT3_cert_block.yaml" -f kw45b41z8
-nxpimage cert-block export -c "..\config\ROT4_cert_block.yaml" -f kw45b41z8
+nxpimage cert-block export -c "..\config\ROT1_cert_block.yaml"
+nxpimage cert-block export -c "..\config\ROT2_cert_block.yaml"
+nxpimage cert-block export -c "..\config\ROT3_cert_block.yaml"
+nxpimage cert-block export -c "..\config\ROT4_cert_block.yaml"
 
 nxpcrypto key generate -k secp384r1 -o "..\workspace\keys\ISK1_1_p384.pem"
-nxpimage cert-block export -c "..\config\IMG1_1_cert_block.yaml" -f kw45b41z8
+nxpimage cert-block export -c "..\config\IMG1_1_cert_block.yaml"
 
 
 

@@ -3,9 +3,9 @@
 
 @rem SPDX-License-Identifier: BSD-3-Clause
 
-nxpdebugmbox -f kw45b41z8 cmd start
+nxpdebugmbox cmd -f kw45b41z8 start 
 
-nxpdebugmbox -f kw45b41z8 -v -i pyocd auth -b 0x0 -c ../workspace/debug_auth/debug_auth_cert.dc -k ../workspace/keys/debug_authentication_key_ECC_384.pem
+nxpdebugmbox -i pyocd -v dat auth  -c ../config/dat_config.yaml
 
 
 pause

@@ -1,10 +1,17 @@
 # ===============  YAML configuration for Certification Block V21  ================
+
+# ======================================================================================================================
+#                                                 == General Options ==                                                 
+# ======================================================================================================================
+# -------------------------------------===== The chip family name [Required] =====--------------------------------------
+# Description: NXP chip family identifier.
+family: kw45b41z8
 # ======================================================================================================================
 #                                   == ISK (Image signing key) Certificate Settings ==
 # ======================================================================================================================
 useIsk: True  # [Required], Use ISK for signature certification.
 iskPublicKey: ../workspace/keys/ISK1_1_p384.pub
-signProvider: type=file;file_path=../workspace/keys/ROT1_p384.pem
+signer: type=file;file_path=../workspace/keys/ROT1_p384.pem
 iskCertificateConstraint: 0  # [Optional] Constraint is certificate version, compared with monotonic counter in PFR/OTP.
 # iskCertData: user_cert_data.bin  # [Optional] ISK certificate user data
 # ======================================================================================================================

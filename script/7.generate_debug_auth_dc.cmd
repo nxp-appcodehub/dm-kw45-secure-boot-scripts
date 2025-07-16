@@ -5,7 +5,7 @@
 
 nxpcrypto key generate -k secp384r1 -o "..\workspace\keys\debug_authentication_key_ECC_384.pem"
 
-nxpdebugmbox -f kw45b41z8 gendc -c ..\config\deb_auth_config.yaml -o ..\workspace\debug_auth\debug_auth_cert.dc
+nxpdebugmbox dat dc export -c ..\config\deb_auth_config.yaml -o ..\workspace\debug_auth\debug_auth_cert.dc
 
 
 pause

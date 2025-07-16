@@ -110,4 +110,4 @@ dck: ..\workspace\keys\debug_authentication_key_ECC_384.pub
 
 # -------------------------------===== Signature Provider [Conditionally required] =====--------------------------------
 # Description: Signature provider configuration in format 'type=<sp_type>;key_number=<value>'.
-sign_provider: type=file;file_path=..\workspace\keys\ROT1_p384.pem
+signer: type=file;file_path=..\workspace\keys\ROT1_p384.pem

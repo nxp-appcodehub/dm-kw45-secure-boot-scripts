@@ -9,7 +9,7 @@ masterBootOutputFile: ../workspace/bootable_images/OEM_Return_Signed.xip  # [Req
 inputImageFile: ../OEM_Return_Plain.bin  # [Required], Plain application image; The input application image to by modified to Master Boot Image.
 outputImageExecutionAddress: 0x00000000  # [Required], Loading address of application; Application loading address in RAM if not XiP, otherwise address of load in XiP.
 firmwareVersion: 0x0  # [Optional], Firmware version; Version of application image firmware.
-outputImageSubtype: main # [Optional], Image subtype determine the image use in MCU (Main application or something else).
+
 # ======================================================================================================================
 #                                              == Certificate Block V2.1 ==
 # ======================================================================================================================
@@ -21,9 +21,9 @@ certBlock: ../workspace/keys/ROT1_cert_block.bin
 # ======================================================================================================================
 # -------------------------------===== Signature Provider [Conditionally required] =====--------------------------------
 # Description: Signature provider configuration in format 'type=<sp_type>;<key1>=<value1>;<key2>=<value2>".
-signProvider: type=file;file_path=../workspace/keys/ROT1_p384.pem
+signer: type=file;file_path=../workspace/keys/ROT1_p384.pem
 
 # ----------------------------------------------------------------------------------------------------
 #                                      == Trust Zone Settings ==                                      
 # ----------------------------------------------------------------------------------------------------
-enableTrustZone: true  # [Optional], TrustZone enable option, If not specified, the Trust zone is disabled.
+

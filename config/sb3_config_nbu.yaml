@@ -21,7 +21,7 @@ containerOutputFile: ../workspace/bootable_images/app_nbu.sb3
 # ======================================================================================================================
 # -------------------------------===== Signature Provider [Conditionally required] =====--------------------------------
 # Description: Signature provider configuration in format 'type=<identifier>;<key1>=<value1>;<key2>=<value2>'.
-signProvider: type=file;file_path=../workspace/keys/ROT1_p384.pem
+signer: type=file;file_path=../workspace/keys/ROT1_p384.pem
 # ======================================================================================================================
 #                                              == Certificate Block V2.1 ==                                             
 # ======================================================================================================================
