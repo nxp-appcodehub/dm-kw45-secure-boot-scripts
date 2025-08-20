@@ -27,4 +27,5 @@ ECHO If new keys are generated, please modify the script 2.program_keys_to_devic
 ECHO WARNING!!!
 ECHO on
 
+
 pause
