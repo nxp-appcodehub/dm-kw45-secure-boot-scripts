@@ -24,7 +24,7 @@ This is Secure Provisioning SDK (spsdk) scripts package is used for KW45 secure 
 ## 1. Software<a name="step1"></a>
 python: 3.13.5+
 
-***spsdk: 3.0.1***
+**spsdk: 3.1.0**
 
 J-Link Commander: 8.50+
 
@@ -51,7 +51,7 @@ If KW45B41Z-EVK is used, press the button SW4(PTA4) when reset, KW45 will enter 
 Install spsdk (Run as administrator)
 ```
 python -m pip install --upgrade pip
-pip install spsdk==3.0.1
+pip install spsdk==3.1.0
 spsdk --version
 ```
 Enter the directory "script" and double-click the script to run.
