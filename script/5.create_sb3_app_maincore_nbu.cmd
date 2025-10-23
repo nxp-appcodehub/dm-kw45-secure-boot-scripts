@@ -3,5 +3,5 @@
 
 @rem SPDX-License-Identifier: BSD-3-Clause
 
-nxpimage sb31 export -c "..\config\sb3_config_maincore_nbu.yaml"
+nxpimage sb31 export -c "../config/sb3_config_maincore_nbu.yaml"
 pause

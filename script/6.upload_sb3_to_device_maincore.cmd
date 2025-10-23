@@ -19,6 +19,6 @@ if "%comport%"=="" (
 
 :: Script uploads SB3.1 file with main core image to device.
 :: Update the connection to the device according your configuration "-p COMX", see blhost User's Guide in .\doc folder.
-blhost -p %comport%,460800 receive-sb-file ..\workspace\bootable_images\app_maincore.sb3
+blhost -p %comport%,460800 receive-sb-file ../workspace/bootable_images/app_maincore.sb3
 pause
 :quit

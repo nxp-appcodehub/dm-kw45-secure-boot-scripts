@@ -3,21 +3,21 @@
 
 @rem SPDX-License-Identifier: BSD-3-Clause
 
-nxpcrypto key generate -k secp384r1 -o "..\workspace\keys\ROT1_p384.pem"
-nxpcrypto key generate -k secp384r1 -o "..\workspace\keys\ROT2_p384.pem"
-nxpcrypto key generate -k secp384r1 -o "..\workspace\keys\ROT3_p384.pem"
-nxpcrypto key generate -k secp384r1 -o "..\workspace\keys\ROT4_p384.pem"
+nxpcrypto key generate -k secp384r1 -o "../workspace/keys/ROT1_p384.pem"
+nxpcrypto key generate -k secp384r1 -o "../workspace/keys/ROT2_p384.pem"
+nxpcrypto key generate -k secp384r1 -o "../workspace/keys/ROT3_p384.pem"
+nxpcrypto key generate -k secp384r1 -o "../workspace/keys/ROT4_p384.pem"
 python generate_SB3KDK.py
-type ..\workspace\keys\sb3kdk.txt
+type ../workspace/keys/sb3kdk.txt
 
 
-nxpimage cert-block export -c "..\config\ROT1_cert_block.yaml"
-nxpimage cert-block export -c "..\config\ROT2_cert_block.yaml"
-nxpimage cert-block export -c "..\config\ROT3_cert_block.yaml"
-nxpimage cert-block export -c "..\config\ROT4_cert_block.yaml"
+nxpimage cert-block export -c "../config/ROT1_cert_block.yaml"
+nxpimage cert-block export -c "../config/ROT2_cert_block.yaml"
+nxpimage cert-block export -c "../config/ROT3_cert_block.yaml"
+nxpimage cert-block export -c "../config/ROT4_cert_block.yaml"
 
-nxpcrypto key generate -k secp384r1 -o "..\workspace\keys\ISK1_1_p384.pem"
-nxpimage cert-block export -c "..\config\IMG1_1_cert_block.yaml"
+nxpcrypto key generate -k secp384r1 -o "../workspace/keys/ISK1_1_p384.pem"
+nxpimage cert-block export -c "../config/ISK1_1_cert_block.yaml"
 
 
 

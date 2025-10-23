@@ -15,13 +15,13 @@ firmwareVersion: 0x0  # [Optional], Firmware version; Version of application ima
 # ======================================================================================================================
 # -----------------------------===== Certificate Block binary/config file [Required] =====------------------------------
 # Description: Path to certificate block binary or config file.
-certBlock: ../workspace/keys/ROT1_cert_block.bin
+certBlock: ../workspace/keys/ISK1_1_cert_block.bin
 # ======================================================================================================================
 #                                              == Image Signing Settings ==
 # ======================================================================================================================
 # -------------------------------===== Signature Provider [Conditionally required] =====--------------------------------
 # Description: Signature provider configuration in format 'type=<sp_type>;<key1>=<value1>;<key2>=<value2>".
-signer: type=file;file_path=../workspace/keys/ROT1_p384.pem
+signer: type=file;file_path=../workspace/keys/ISK1_1_p384.pem
 
 # ----------------------------------------------------------------------------------------------------
 #                                      == Trust Zone Settings ==                                      

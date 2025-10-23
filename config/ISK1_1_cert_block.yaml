@@ -31,5 +31,5 @@ mainRootCertId: 0  # [Conditionally required] Index of root key that is used as 
 # ======================================================================================================================
 # --------------------------------------===== cert block filename [Required] =====--------------------------------------
 # Description: Generated cert block filename.
-containerOutputFile: ../workspace/keys/ISK_1_cert_block.bin
+containerOutputFile: ../workspace/keys/ISK1_1_cert_block.bin
 # ---------------------------------------------------------------------------------

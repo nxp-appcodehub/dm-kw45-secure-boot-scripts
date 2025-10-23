@@ -21,13 +21,13 @@ containerOutputFile: ../workspace/bootable_images/app_maincore.sb3
 # ======================================================================================================================
 # -------------------------------===== Signature Provider [Conditionally required] =====--------------------------------
 # Description: Signature provider configuration in format 'type=<identifier>;<key1>=<value1>;<key2>=<value2>'.
-signer: type=file;file_path=../workspace/keys/ROT1_p384.pem
+signer: type=file;file_path=../workspace/keys/ISK1_1_p384.pem
 # ======================================================================================================================
 #                                              == Certificate Block V2.1 ==                                             
 # ======================================================================================================================
 # -----------------------------===== Certificate Block binary/config file [Required] =====------------------------------
 # Description: Path to certificate block binary or config file.
-certBlock: ../workspace/keys/ROT1_cert_block.bin
+certBlock: ../workspace/keys/ISK1_1_cert_block.bin
 # ======================================================================================================================
 #                                           == Secure Binary v3.1 Settings ==                                           
 # ======================================================================================================================

@@ -20,7 +20,7 @@ if "%comport%"=="" (
 ::erase nbu flash
 blhost -p %comport%,460800  flash-erase-all 2
 ::
-blhost -p %comport%,460800  write-memory 0x48800000 ..\kw47_nbu_ble_all_hosted.bin
+blhost -p %comport%,460800  write-memory 0x48800000 ../kw47_nbu_ble_all_hosted.bin
 
 
 pause

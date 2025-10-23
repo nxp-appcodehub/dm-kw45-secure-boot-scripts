@@ -3,6 +3,6 @@
 
 @rem SPDX-License-Identifier: BSD-3-Clause
 
-nxpimage mbi export -c "..\config\signed_config_app_maincore.yaml"
+nxpimage mbi export -c "../config/signed_config_app_maincore.yaml"
 
 pause
